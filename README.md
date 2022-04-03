@@ -9,4 +9,4 @@ These functions and scripts are designed to take as inputs '.count' matrices. Th
 1. Individual RNA-seq libraries are mapped by [STAR](https://github.com/alexdobin/STAR).
 2. Libraries are allelically split by [SNPsplit](https://github.com/FelixKrueger/SNPsplit).  
 3. Unsplit, genome1, and genome2 .bam files are sorted using samtools
-4. We then run [featureCounts](http://bioconductor.org/packages/release/bioc/html/Rsubread.html) using a .gtf file of non-redundant genes to generate files in which columns 1-6 contain gene information and columns 7-9 specify the read/fragment counts from unsplit, genome1, and genome2 .bam files respectively. 
+4. We then run [featureCounts](http://bioconductor.org/packages/release/bioc/html/Rsubread.html) using a .gtf file of non-redundant genes. This generates the counts table in which columns 1-6 contain gene information and columns 7-9 specify the read/fragment counts from unsplit, genome1, and genome2 .bam files respectively. 
