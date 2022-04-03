@@ -63,7 +63,7 @@ Restricts analysis to just the genes on ChrX proximal to the Xist locus (0-103Mb
 ```{chrX1.filter}
 chrX1.filter <- function(counts_table){
   chrRNA_counts_table_chrX <- filter(counts_table, !grepl("chrX",counts_table$Chr))
-  chrRNA_counts_table_chrX <-  counts_table[which(grepl("chrX",counts_table$Chr) == TRUE), ]
+  chrRNA_counts_table_chrX <- counts_table[which(grepl("chrX",counts_table$Chr) == TRUE), ]
   numextract <- function(string){
     str_extract(string, "\\-*\\d+\\.*\\d*")
   }
@@ -82,7 +82,7 @@ Restricts analysis to just X-linked genes, for iXist-ChrX-Cast lines.
 ```{chrX.filter}
 chrX.filter <- function(counts_table){
   chrRNA_counts_table_chrX <- filter(counts_table, !grepl("chrX",counts_table$Chr))
-  chrRNA_counts_table_chrX <-  counts_table[which(grepl("chrX",counts_table$Chr) == TRUE), ]
+  chrRNA_counts_table_chrX <- counts_table[which(grepl("chrX",counts_table$Chr) == TRUE), ]
   return(chrRNA_counts_table_chrX)
   }
   ```
