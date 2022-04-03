@@ -2,7 +2,7 @@
 ## Useful functions for allelic ChrRNA-seq data analysis
 **LoadingCountFile**
 
-This function reads in .count matrices. Upon reading individual count matrices, we create a "master" counts table appending the 3 counts columns (7:9) for each sample.
+This function reads in .count matrices (write the path to the file to load within ""). After reading individual count matrices, we then create a "master" counts table appending the 3 counts columns (7:9) for each sample.
 ```{LoadingCountFile}
 LoadingCountFile <- function(file=""){
   Count <- read.table(file, header=T)
