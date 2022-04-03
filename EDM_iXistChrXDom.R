@@ -3,7 +3,6 @@
 # 2. The sample allelic ratio table, with replicates of the same timepoint averaged together (for visualising model fit at a later step)
 # 3. A list of escapee genes, as defined from the final NPC timepoints 
 
-
 library(gplots)
 
 ### SET-UP OF MODEL (for iXist-ChrX-Dom) ####
