@@ -74,7 +74,18 @@ chrX1.filter <- function(counts_table){
   return(chrRNA_filter_chrX1)
 }
 ```
-iXist-ChrX-Cast counts tables can be restricted to X-linked genes with a simple grepl command on the 'Chr' column. 
+
+**chrX1.filter**
+
+Restricts analysis to just X-linked genes, for iXist-ChrX-Cast lines.
+
+```{chrX1.filter}
+chrX1.filter <- function(counts_table){
+  chrRNA_counts_table_chrX <- filter(counts_table, !grepl("chrX",counts_table$Chr))
+  chrRNA_counts_table_chrX <-  counts_table[which(grepl("chrX",counts_table$Chr) == TRUE), ]
+  return(chrRNA_counts_table_chrX)
+  }
+  ```
 
 **AR.table**
 
