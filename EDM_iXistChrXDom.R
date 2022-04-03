@@ -1,6 +1,8 @@
 ### REQUIRED FILES FOR THE EXPONENTIAL DECAY MODEL ####
 # 1. An allelic ratio table, where columns from 7 onwards are samples of the ES-to-NPC differentiation timecourse
-# 2. A list of escapee genes, as defined from the final NPC timepoints 
+# 2. The sample allelic ratio table, with replicates of the same timepoint averaged together (for visualising model fit at a later step)
+# 3. A list of escapee genes, as defined from the final NPC timepoints 
+
 
 library(gplots)
 
