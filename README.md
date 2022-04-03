@@ -12,4 +12,4 @@ These functions and scripts are designed to take as inputs '.count' matrices. Th
 4. We then run [featureCounts](http://bioconductor.org/packages/release/bioc/html/Rsubread.html) using a .gtf file of non-redundant genes. This generates the counts table in which columns 1-6 contain gene information and columns 7-9 specify the read/fragment counts from unsplit, genome1, and genome2 .bam files respectively. 
 
 
-The scripts for fitting exponential decay models to timecourse of ES-to-NPC differentiation in iXist-ChrX cell lines require allelic ratio tables as the primary input files. These can be created using the functions provided.
+The scripts for fitting exponential decay models to timecourse of ES-to-NPC differentiation in iXist-ChrX cell lines require **allelic ratio** tables as the primary input files. These can be created using the functions provided.
