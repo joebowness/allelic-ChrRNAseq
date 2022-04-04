@@ -13,7 +13,9 @@ LoadingCountFile <- function(file=""){
 **Allelic.Filter.OverFracSamples**
 
 This function applies an "allelic filter" to a counts table. It only keep genes for which the number of allelically mapping reads exceeds a given cutoff. We suggest a cutoff of 10 as reasonable.
+
 Additionally, you can set the 'fraction' to adjust stringency of the filter with respect to the group of samples analysed together. Set this to 1 to ensure only genes with 10 allelic reads in **every** sample, or a smaller fraction (eg. 0.8) to reduce filtering stringency and enable analysis of more genes which may otherwise be filtered out by outlier samples (for example, from a sample sequenced at lower depth).
+
 Although it is possible to apply the allelic filter to each counts table/dataset individually, this will generate slight different gene numbers for each table, making them incompatible.  Therefore we preferred to apply the filter only once - to the allelic ratio table of the wild-type timecourse in iXist-ChrX-Dom (with replicates this table contains ~10-16 samples) - and use that set of genes (n=246 iXist-ChrX-Dom, n=399 iXist-ChX-Cast) to filter all other mutant data sets. 
 
 ```{Allelic.Filter.OverFracSamples}
@@ -35,6 +37,7 @@ Allelic.Filter.OverFracSamples <- function(counts_table,cutoff,fraction){
 **Allelic.Ratio**
 
 Allelic ratio equation for iXist-ChrX-Dom lines, where g1_counts = *Castaneous* = **Xa** and g2_counts = *Domesticus*/129 = **Xi**
+
 ```{Allelic.Ratio}
 Allelic.Ratio <- function(g1_counts,g2_counts){
   Xa <- as.numeric(g1_counts)
