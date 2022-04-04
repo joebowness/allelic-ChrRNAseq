@@ -127,7 +127,7 @@ AR.table.reverse <- function(counts_table){
 
 Filters out genes from allelic ratio tables which are heavily allelically skewed in untreated mESCs (where biallelic expression is expected). The rationale is that extreme allelic skewing of certain genes in untreated samples are artifacts from misannotated/incongruous SNPs. This is apparent from visual inspection of chrRNA tracks on a Genome Browser.
 
-Upper and lower allelic ratio thresholds can be set, we recommend 0.1 and 0.9. 
+Upper and lower allelic ratio thresholds can be set, we recommend 0.9 and 0.1. 
 
 ```{initialAR.filter}
 initialAR.filter <- function(AR_table,lower,upper){
