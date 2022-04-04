@@ -93,7 +93,7 @@ chrX.filter <- function(counts_table){
 
 **AR.table**
 
-For iXist-ChrX-Dom lines, applies the allelic ratio equation to a counts table (of the form specified above) to create an 'allelic ratio' table. In this table, columns 1:6 contain gene information and 7 onwards are the allelic ratios for each sample.
+For iXist-ChrX-Dom lines, applies the allelic ratio equation to a counts table to create an 'allelic ratio' table. In this table, columns 1:6 contain gene information and 7 onwards are allelic ratios for each sample.
 
 ```{AR.table}
 AR.table <- function(counts_table){
