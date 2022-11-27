@@ -14,7 +14,7 @@ LoadingCountFile <- function(file=""){
 
 This function applies an "allelic filter" to a counts table. It only keep genes for which the number of allelically mapping reads exceeds a given cutoff. We suggest a cutoff of 10 as reasonable.
 
-Additionally, you can set the 'fraction' to adjust stringency of the filter with respect to the group of samples analysed together. Set this to 1 to ensure only genes with 10 allelic reads in **every** sample, or a smaller fraction (eg. 0.8) to reduce filtering stringency and enable analysis of more genes which may otherwise be filtered out by outlier samples (for example, from a sample sequenced at lower depth).
+Additionally, one can set the 'fraction' to adjust stringency of the filter with respect to the group of samples analysed together. Set this to 1 to ensure only genes with 10 allelic reads in **every** sample pass the filter, or set to a smaller fraction (eg. 0.8) to reduce filter stringency and enable analysis of more genes which may otherwise be filtered out by outlier samples (for example, from a sample sequenced at lower depth).
 
 Although it is possible to apply the allelic filter to each counts table/dataset individually, this will generate slightly different gene numbers for each table, making them incompatible.  Therefore we preferred to apply the filter only once - to the allelic ratio tables of the wild-type timecourse in iXist-ChrX (with replicates this table contains ~10-16 samples) - and use these sets of genes (n=246 iXist-ChrX-Dom, n=399 iXist-ChX-Cast) to filter all other mutant data sets. 
 
